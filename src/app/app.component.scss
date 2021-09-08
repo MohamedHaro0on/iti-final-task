@@ -1,0 +1,56 @@
+$green-color-one: #7dad3d;
+$green-color-two: #54be73;
+$green-color-three: #78bf4d;
+$green-color-four: #9cc026;
+$green-color-five: #f2f2f2;
+
+.mainButtonAshrqat {
+    margin-right: 10px;
+    border: solid 0px;
+    border-radius: 10px;
+}
+
+nav {
+    height: 80px;
+    background-color: white;
+
+    .navbar-collapse {
+        flex-grow: initial;
+        .container {
+            width: 100%;
+        }
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: 992px) {
+                background-color: white;
+                padding: 20px;
+                box-sizing: border-box;
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+            }
+            .nav-item {
+                .active {
+                    color: $green-color-three;
+                }
+                .nav-link {
+                    font-size: 18px;
+                    font-weight: 500;
+
+                    &:hover,
+                    &:checked,
+                    &:active {
+                        color: $green-color-three;
+                    }
+                }
+            }
+        }
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        .navbar-brand img {
+            max-height: 50px;
+        }
+    }
+}

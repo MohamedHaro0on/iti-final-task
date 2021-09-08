@@ -1,0 +1,23 @@
+<div class="users-header">
+    <h3>Users</h3>
+</div>
+
+
+<main class="container">
+    <div class="row">
+        <!-- Starting the Coruse Cards : -->
+        <div class="col-4 my-4 justify-content-center" *ngFor="let user of users$ | async">
+            <div class="card">
+                <img [src]=user.imgUrl class="card-img-top" />
+                <div class="card-body">
+                    <h4 class="card-title">name : {{user.name}}</h4>
+                    <p class="card-text">user name : {{user.username}}</p>
+                    <address class="card-text text-danger font-weight-bold">Address : {{user.address.street}} -
+                        {{user.address.suite}}</address>
+                    <p class="text-secondary"> phone number : {{user.phone}}</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of  the Coruse Cards : -->
+    </div>
+</main>
